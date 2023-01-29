@@ -38,9 +38,9 @@ Result<std::vector<unsigned>, Error> read_data(std::string_view filename) {
     return numbers;
 }
 
-void print(std::span<unsigned> s) {
+void print(std::vector<unsigned> const& v) {
     std::cout << "[ ";
-    for (auto const& n : s) {
+    for (auto const& n : v) {
         std::cout << n << ' ';
     }
     std::cout << "]\n";
