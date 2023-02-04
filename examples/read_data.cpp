@@ -13,7 +13,8 @@
 
 using Error = std::string_view;
 
-Result<std::vector<unsigned>, Error> read_data(std::string_view filename) {
+dlight::Result<std::vector<unsigned>, Error> 
+read_data(std::string_view filename) {
     std::ifstream fs(filename.data());
     if (!fs.good()) {
         return { "Error: Couldn't open file." };

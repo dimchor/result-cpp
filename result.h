@@ -7,6 +7,8 @@
 
 #include "is_streamable.h"
 
+namespace dlight {
+
 template<typename T, typename E>
 class [[nodiscard]] Result {
 public:
@@ -103,3 +105,5 @@ private:
         type == Type::TypeT ? t.~T() : e.~E();
     }
 };
+
+}
